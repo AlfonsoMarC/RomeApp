@@ -1,0 +1,19 @@
+ <div id="header_container" class={{episodeId}} class="d-flex justify-content-between align-items-center flex-nowrap">
+    
+    <div id="rome-header">
+     <a [routerLink]="['/']" class="navbar-brand">
+     <img id="rome-header-icon" src="../assets/img/rome-header-icon.png" alt="Rome icon">
+		  Roman Empire
+     </a>
+	</div>
+
+    <div id="episode-header" class={{episodeId}} class="d-none d-md-flex justify-content-center align-items-center flex-nowrap">
+     <img id="header_icon" class={{episodeId}} src={{episodeSrc}} alt="Episode icon">
+	 <h1 id="header_title" class={{episodeId}}>{{episodeTitle}}</h1>
+    </div>
+
+	<div id="timeline-header">
+	 <button id="timeline-button" class="openbtn d-md-none" (click)=showTimelinePanel()>☰ Timeline</button>  	   	 
+	</div>	
+
+</div> 

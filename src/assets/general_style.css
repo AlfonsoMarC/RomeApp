@@ -1,0 +1,218 @@
+
+@font-face {
+font-family:caligula;
+src: url( "fonts/caligula.TTF");
+}
+
+@font-face {
+font-family:celtichand;
+src: url( "fonts/CelticHand.ttf");
+}
+
+@font-face {
+font-family:spqr;
+src: url("fonts/spqr.ttf");
+}
+
+@font-face {
+font-family:possum;
+src: url("fonts/PossumSaltareNF.ttf");
+}
+
+
+body {
+cursor: url(img/cursor4.png),auto;
+}
+
+a {
+/*cursor: url(img/cursor4.png),auto;*/
+}
+
+
+/*  CONTAINER */
+
+#contanier {
+background-image: url( "img/texture_old-parchment-light-h.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+left: 0;
+right: 0;
+display: flex;
+}
+
+/* TIMELINE MENU */
+#timeline_menu_container{
+	position: relative;
+	right: 0;
+	width: 18%;
+}
+
+/*  CONTENT */
+
+#content{
+	position: relative;
+	right: 0;
+	display: inline;
+	padding: 0;
+}
+
+/*  TABAR  */
+
+.nav-tabs {
+font-family: celtichand, "Times New Roman", Times, serif;
+margin-left: 0.5%;
+background-color:#700c05;
+border: none!important;
+}
+
+.nav-tabs .nav-item {
+margin-bottom:0px!important;
+}
+
+a.tab.nav-link.active{
+color: darkslategray;
+background-color: #e5b68b!important;
+border:none!important;
+border-radius: 0px!important;
+box-shadow:inset 5px 5px 10px #470a05;
+}
+
+.tab.nav-link {
+color:#e5b68b;
+border:none!important;
+}
+
+.tab.nav-link:hover {
+color:#f8d9b7;
+border:none;
+text-shadow: 1px 1px 5px #fff;	
+}
+
+.tab.nav-link.active:hover {
+color: darkslategray;
+text-shadow: none;	
+border:none!important;
+text-shadow: none;
+}
+
+
+#profile{
+	width: 100%;
+}
+
+
+/*MAP ELEMENTS*/
+#map_date_box{
+position: absolute;
+top:0px;
+right: 0px; 
+margin: 1%;
+display: flex; 
+align-items: center; 
+font-family: caligula, "Times New Roman", Times, serif;
+-webkit-text-stroke: 1px black;
+font-size: 20px;
+	/*text-shadow: -1px -1px 10px  #d9d9d9 , 1px 1px 10px  #d9d9d9 , -1px 1px 10px   #d9d9d9, 1px -1px 10px   #d9d9d9;*/
+/*	 background:-webkit-radial-gradient(center, ellipse,  #404040 15%, transparent 70%);*/
+}
+
+#map_date {
+margin: 1%;
+font-size: 25px;
+color:black;
+}
+
+.frame{
+display: none;
+position: absolute;
+top: 5%; 
+bottom:50%; 
+left: 2%; 
+right: 50%;
+z-index: 2;
+background-image: url("img/frame3.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+font-size: 1.1vw;
+}
+
+.expanded{
+top: 3%; 
+bottom:3%; 
+left: 3%; 
+right: 3%;
+font-size: 16px;
+}
+
+.frame_header{
+min-height: 25px;
+margin-right: 5%;
+margin-left: 5%;
+margin-top: 2%;
+}
+
+.frame_title {
+	align-self: flex-end;
+	font-size: 125%;
+	font-weight: 500;
+}
+
+.close_button { 
+margin-left:5px; 
+float:right;
+}
+
+.close_button > img {
+width: 20px;
+}
+
+.resize_button { 
+margin-left:5px; 
+float:right;
+}
+
+.resize_button > img { 
+width: 20px;
+}
+
+.frame_text{
+	position: absolute;
+	bottom: 5%;
+	top:25px;
+	left: 5%;
+	right: 5%;
+	overflow-y: scroll;
+   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+	text-align: justify;
+	margin-top:3%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.frame_text::-webkit-scrollbar { 
+    display: none;
+}
+
+.subtitles{	
+ z-index: 2;
+ padding-left: 20px;
+ padding-right: 20px; 
+ padding-top: 8px;
+ padding-bottom: 8px;
+ position: fixed;
+ bottom: 0;
+ max-height: 100px;
+ background-color: #ffffff;
+ background: rgba(255, 255, 255, 0.6);
+ display: flex;
+ overflow-y: scroll;
+-ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+ text-align: justify;
+ font-size:14px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.subtitles::-webkit-scrollbar { 
+    display: none;
+}
+

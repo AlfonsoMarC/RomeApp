@@ -1,0 +1,30 @@
+<section>
+	<div id="map_container">
+		<img id="empire_map" src="../assets/img-home/empire.png" alt="Mediterranean" />
+		<img id="expansion_map" [src]="expansionMap" alt="Roman Empire" />
+
+
+		<div id="map_bar_selector">
+			<div class="map_bar_selector_arrow_div">
+				<a href="#" (click)="previousMapArrow($event)">
+					<img id="map_bar_selector_arrow_left" src="../assets/img/arrow.png" alt="left arrow" />
+				</a>
+			</div>
+
+			<div id="bar" #bar (mousedown)="barMouseDown($event)">
+				<div id="drag_item" #dragItem
+				(mousedown)="dragItemMouseDown($event)"
+			
+				
+				></div>
+			</div>
+			
+			<div class="map_bar_selector_arrow_div">
+				<a href="#" (click)="nextMapArrow($event)">
+					<img id="map_bar_selector_arrow_right" src="../assets/img/arrow.png" alt="right arrow" />
+				</a>
+			</div>
+
+		</div>
+	</div>
+</section>

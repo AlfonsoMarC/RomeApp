@@ -1,0 +1,14 @@
+<div id="frame" class={{className}} *ngIf="isOpen">
+  <div id="frame_header">
+        <button id="close_button" (click)="closeFrame()">
+            <img src="../../../assets/img/cross.png" alt="close">
+        </button>
+        <button id="resize_button" (click)="resizeFrame()">
+            <img class={{className}} src="../../../assets/img/shrink.png" alt="resize">
+        </button>
+        <div>
+            <div id="frame_title">{{title}}</div>
+        </div>
+    </div>
+    <div id="frame_text">{{text}}</div>
+</div>

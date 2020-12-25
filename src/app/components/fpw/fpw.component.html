@@ -1,0 +1,26 @@
+<!-- TABS NAVIGATION BAR-->
+<nav>
+  <ul class="nav nav-tabs" >
+    <li className="nav-item">
+      <a class="tab nav-link" routerLink="maps" #mapsTab="routerLinkActive" routerLinkActive="active">
+        Interactive Maps
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="tab nav-link" routerLink="battles"  #battlesTab="routerLinkActive" routerLinkActive="active">
+        Battles
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!--Conditional Rendering for maps tab: Map Selector-->
+<div *ngIf="mapsTab.isActive" id="maps-div">
+  <map-selector [maps]="fpmMaps"></map-selector>
+</div>
+
+<!--Conditional Rendering for battle tab: Battle Menu-->
+<div *ngIf="battlesTab.isActive" id="battle-div">
+</div>
+
+<router-outlet></router-outlet>

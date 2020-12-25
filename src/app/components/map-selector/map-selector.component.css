@@ -1,0 +1,28 @@
+    #map_selector{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 1%;
+    z-index: 3;
+    margin-top: 0.5%;
+    }
+    
+    #map_selector_arrow_left{
+        width: 16px;
+    }
+    
+    #map_selector_arrow_right{
+    width: 16px; 
+    transform: rotate(180deg);
+    }
+    
+    #map_title{
+    width: 180px;
+    text-align: center;
+    font-family: caligula, "Times New Roman", Times, serif;
+    -webkit-text-stroke: 1px black;
+    font-size: 12px;
+    text-shadow: -1px -1px 5px seashell , 1px 1px 5px seashell , -1px 1px 5px  seashell , 1px -1px 5px seashell ;
+    }
+    

@@ -1,0 +1,21 @@
+#footer{
+    height: 80px;
+    background-color: #242222;
+    border-top: 3px solid grey;      
+    }
+    
+    #footer.fpw {
+    background-color: #470a05;
+    border-top: 3px solid #e5b68b;
+    }
+    
+    #footer.spw {
+    background-color: #470a05;
+    border-top: 3px solid #e5b68b;
+    }
+    
+    #footer.tpw {
+    background-color: #470a05;
+    border-top: 3px solid #e5b68b;
+    }
+        

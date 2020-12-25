@@ -1,0 +1,33 @@
+<section class="map_container">
+<img id="fpw1" class="intercative_map" src={{image}} width="100%" alt="Mediterranean 264 a.C." 
+(load)="imageLoaded()"/>
+
+<a id="fpw1_rome_a" href="#" 
+(mouseenter)="hoverMap(0)" 
+(mouseleave)="hoverMap(4)"
+(click)="openFrame($event, 0)">
+</a>
+
+<a id="fpw1_syracuse_a" href="#" 
+(mouseenter)="hoverMap(1)" 
+(mouseleave)="hoverMap(4)"
+(click)="openFrame($event, 1)">
+</a>
+
+<a id="fpw1_carthage_a" href="#" 
+(mouseenter)="hoverMap(2)" 
+(mouseleave)="hoverMap(4)"
+(click)="openFrame($event, 2)">
+</a>
+
+<a id="fpw1_messana_a" href="#" 
+(mouseenter)="hoverMap(3)" 
+(mouseleave)="hoverMap(4)"
+(click)="openFrame($event, 3)">
+</a>
+
+<mapframe [content]="frameContent" [isOpen]="frameIsOpen" (isOpenChange)="frameIsOpen=$event"></mapframe>
+
+<subtitle [contentLoaded]="imageIsLoaded" [text]="subtitleText"></subtitle>
+
+</section>

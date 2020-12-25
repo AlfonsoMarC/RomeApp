@@ -1,0 +1,81 @@
+/*  TIMELINE MENU  */
+#timeline_menu{
+flex-direction:column; 
+overflow-y:auto;
+}
+.timeline_flex_item {
+font-size: 1.1vw;
+}
+
+.timeline_sidepanel {
+display: none;
+width: 200px;	
+position: absolute;
+top: 0;
+bottom:0;
+left: 0;
+z-index: 4;
+overflow:auto;
+transition: 0.5s;
+background-image: url("../../../assets/img/texture_old-parchment-light-h.jpg");
+background-repeat: no-repeat;
+background-size:100% 100%;
+font-size: 12px;	
+box-shadow: 10px 0px 6px -6px black;
+}
+
+#timeline_menu_header{ 
+padding-top: 3%;
+padding-right: 3%;
+height:7%; 
+}
+
+#timeline_navbar{
+padding: 0;
+display:block;
+margin-top:15%;
+}
+
+#timeline_title {
+    font-family:celtichand, "Times New Roman", Times, serif;
+    background-image: url("../../../assets/img/pilum.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:bottom;
+    display: flex; 
+    justify-content: center;
+    margin-right:3%;
+    margin-left:3%;
+}
+
+#timeline_ul{
+padding: 5%;
+font-family:celtichand, "Times New Roman", Times, serif;
+display:flex;
+flex-direction:column; 
+justify-content:space-around;
+}
+
+#timeline_closebtn{	
+    float: right;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+#cross{
+    width:20px;
+}
+
+.side.nav-link {
+color:black;
+border:none!important;
+}
+
+.side.nav-link:hover {
+color:#470a05;
+text-shadow: #aa1308 4px 4px 10px;
+}
+
+.pugio{
+    width: 16%;
+}
