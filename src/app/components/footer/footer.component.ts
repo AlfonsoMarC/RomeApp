@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedService } from "../../shared.service";
 
 @Component({
@@ -6,13 +6,19 @@ import { SharedService } from "../../shared.service";
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements AfterContentChecked {
+export class FooterComponent implements OnInit {
   public episodeId: string;
 
   constructor(private sharedService: SharedService) { }
 
-  ngAfterContentChecked() {
-    this.episodeId = this.sharedService._episodeId;
+  ngOnInit(){
+    this.sharedService.getEpisode().subscribe(episode => {
+      if (episode == null){
+        this.episodeId="";
+      }else{
+        this.episodeId=episode.id;
+      }
+    })
   }
 
 }

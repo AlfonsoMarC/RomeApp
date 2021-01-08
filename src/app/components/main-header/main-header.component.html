@@ -13,7 +13,13 @@
     </div>
 
 	<div id="timeline-header">
-	 <button id="timeline-button" class="openbtn d-md-none" (click)=showTimelinePanel()>☰ Timeline</button>  	   	 
+     <button id="timeline-button" class="openbtn d-md-none" 
+     [ngClass]="{
+         'pressed': !timelineIsHidden,
+         'released': timelineIsHidden}"
+     (click)="showTimelinePanel()">
+     ☰ Timeline
+    </button>  	   	 
 	</div>	
 
 </div> 

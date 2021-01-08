@@ -1,0 +1,48 @@
+#battleField {
+    position: relative;
+}
+
+
+.ship{
+    background-image: url("../../../assets/img-fpw/ship.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: absolute;
+    width: 20px;
+    height: 4px
+    /*width: 25%;
+    height: 5%;*/
+}
+
+.squadron{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+
+#squadronC4 > .ship{
+    
+}
+
+#squadronC4 > .rotated{
+    /*transition: 4s;
+    transform-origin: 600% 600%;
+    background-color: brown;
+    transform: rotate(-80deg);*/
+    
+}
+
+/*#squadronC4{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    to {transform: 'rotate(45deg)'}
+}
+*/

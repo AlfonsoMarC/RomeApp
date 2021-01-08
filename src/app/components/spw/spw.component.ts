@@ -19,6 +19,6 @@ export class SpwComponent implements OnInit {
   }
 
   ngOnDestroy(){
-    this.sharedService.updateEpisode(0);
-  }
+    this.sharedService.updateEpisode(null);
+   }
 }

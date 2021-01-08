@@ -1,7 +1,12 @@
 <!--TIMELINE MENU-->
-<div id="timeline_menu" class="timeline-flex-item" (window:resize)="detectSize()">
+<div id="timeline_menu" 
+[ngClass]="{
+'hidden' : timelineIsHidden,
+'timeline_sidepanel' : timelineIsToggleable,
+'timeline_fex_item': !timelineIsToggleable
+}">
 <div id="timeline_menu_header">
-		<a id="timeline_closebtn" (click)=hideTimelinePanel()>
+		<a id="timeline_closebtn" *ngIf=timelineIsToggleable (click)="hideTimelinePanel()">
       <img id="cross" src="../../../assets/img/cross.png" alt="x">
     </a>	
 </div>

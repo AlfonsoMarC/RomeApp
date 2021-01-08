@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 import { Episode } from './models/episode';
 
 @Injectable({
@@ -8,33 +8,36 @@ import { Episode } from './models/episode';
 export class SharedService {
 
   _episodes: Array<Episode>;
-  _episodeNumber: number;
-  _episodeNumberBS = new BehaviorSubject<number>(null);
-  _episodeId: string;
-  _episodeTitle: string;
-  _episodeSrc: string;
-
+  _currentEpisode = new BehaviorSubject<Episode>(null);
+  _timelineIsHidden = new BehaviorSubject<boolean>(null);
 
   constructor() {
-    this._episodeNumber;
-    this._episodeId;
-    this._episodeTitle;
-    this._episodeSrc;
-    this._episodeNumberBS.next(this._episodeNumber);
-
   }
 
-  updateEpisode(val) {
-    this._episodeNumber = val;
-    this._episodeNumberBS.next(this._episodeNumber);
-    if (this._episodeNumber == 0 || this._episodeNumber == undefined) {
-      this._episodeId = null;
-      this._episodeTitle = null;
-      this._episodeSrc = null;
-    } else {
-      this._episodeId = this._episodes[this._episodeNumber-1].id;
-      this._episodeTitle = this._episodes[this._episodeNumber-1].title;
-      this._episodeSrc = this._episodes[this._episodeNumber-1].src;
+  updateEpisode(episodeNumber: number) {
+    if (episodeNumber==0 || episodeNumber==null) {
+      this._currentEpisode.next(null);
+    }else {
+      this._currentEpisode.next(this._episodes[episodeNumber-1]);
     }
   }
+
+  getEpisode(): Observable<Episode> {
+    return this._currentEpisode.asObservable();
+  }
+
+  showTimelinePanel(){
+    this._timelineIsHidden.next(false);
+  }
+
+  hideTimelinePanel(){
+    this._timelineIsHidden.next(true);
+  }
+
+  getTimelineStatus(){
+    return this._timelineIsHidden.asObservable();
+  }
+
+
+
 }

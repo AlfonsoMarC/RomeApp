@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {routing , appRoutingProviders} from './app.routing';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -45,7 +47,9 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     routing,
     FlexLayoutModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
   appRoutingProviders

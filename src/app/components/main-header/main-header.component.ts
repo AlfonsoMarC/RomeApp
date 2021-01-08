@@ -1,4 +1,4 @@
-import { Component, AfterContentChecked, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from "../../shared.service";
 
 @Component({
@@ -6,25 +6,38 @@ import { SharedService } from "../../shared.service";
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.css']
 })
-export class MainHeaderComponent implements AfterContentChecked{
+export class MainHeaderComponent implements OnInit{
 
   public episodeId: string;
   public episodeTitle: string;
   public episodeSrc:string; 
+  public timelineIsHidden: boolean; 
 
 
   constructor(private sharedService: SharedService) {
   }
-  
 
-  ngAfterContentChecked() {
-    this.episodeId=this.sharedService._episodeId;
-    this.episodeTitle=this.sharedService._episodeTitle;
-    this.episodeSrc=this.sharedService._episodeSrc;
+  ngOnInit(){
+    this.sharedService.getEpisode().subscribe(episode => {
+      if (episode == null){
+        this.episodeId="";
+        this.episodeTitle="";
+        this.episodeSrc="";
+      }else{
+        this.episodeId=episode.id;
+        this.episodeTitle=episode.title;
+        this.episodeSrc=episode.src;
+      }
+    })
+
+    this.sharedService.getTimelineStatus().subscribe(isHidden=>{
+      this.timelineIsHidden=isHidden;
+    });
+    
   }
 
   showTimelinePanel(){
-  	document.getElementById("timeline_menu").style.display="block";
+  	this.sharedService.showTimelinePanel();
   }
 
 }

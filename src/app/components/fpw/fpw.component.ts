@@ -24,8 +24,8 @@ export class FpwComponent implements OnInit {
    this.sharedService.updateEpisode(this.episodeNumber);
   }
 
-  ngOnDestroy() {
-    this.sharedService.updateEpisode(0);
-  }
+  ngOnDestroy(){
+    this.sharedService.updateEpisode(null);
+   }
 
 }

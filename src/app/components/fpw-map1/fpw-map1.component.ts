@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import frames from './fpw-map1-frames';
+import {FrameService} from '../../services/frame.service';
 
 @Component({
   selector: 'fpw-map1',
   templateUrl: './fpw-map1.component.html',
-  styleUrls: ['./fpw-map1.component.css']
+  styleUrls: ['./fpw-map1.component.css'],
+  providers: [FrameService]
 })
 export class FpwMap1Component implements OnInit {
   public mapImages: any;
@@ -15,7 +17,9 @@ export class FpwMap1Component implements OnInit {
   public frameContent: object;
   public subtitleText:string;
   
-  constructor() {
+  constructor(
+    private _frameService: FrameService
+  ) {
     this.mapImages = [
       "../../../assets/img-fpw/fpw1_ro.png",
       "../../../assets/img-fpw/fpw1_sy.png",

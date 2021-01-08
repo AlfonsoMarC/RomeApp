@@ -9,7 +9,7 @@
   <meta name="keywords" content="rome, empire, history, map">	
 </head>
 
-<body>
+<body (window:resize)="onResize()">
 
 <!--HEADER-->	
  <main-header></main-header>
@@ -18,7 +18,10 @@
 <div id="contanier" class="flex-container">  
 
   <!--TIMELINE MENU-->
-  <timeline-menu id="timeline_menu_container"></timeline-menu>
+  <timeline-menu id="timeline_menu_container" 
+  [timelineIsToggleable]="shrinkedVersion" 
+  [ngStyle]="{'width': shrinkedVersion ? '0%' : '18%'}">
+  </timeline-menu>
   
   <!--CONTENT-->    
   <div id="content" class="container-fluid"> 

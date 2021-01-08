@@ -26,12 +26,35 @@ margin-left: 10px;
 height: 60px; 
 }
 
-
 #timeline-header{
-    background-color: indianred;
+white-space: nowrap;
+margin-right: 6%;
+} 
+
+#timeline-button{
+background-color: transparent;
+border:none;
+border-radius: 10%;
+cursor: pointer;
+outline: inherit;
+padding: 10%;
 }
 
+#timeline-button.released{
+color: rgb(248, 217, 183);
+text-shadow: darkgoldenrod 1px 1px 5px;
+/*box-shadow:inset 2px 2px 5px rgba(0, 0, 0, 0.8);*/
+border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
 
+#timeline-button.pressed {
+color: rgb(248, 217, 183, 0.8);
+background-color:rgba(0, 0, 0, 0.2);
+box-shadow:inset 4px 4px 3px rgba(0, 0, 0, 0.8);
+border-top: 1px solid rgba(0, 0, 0, 0.5);
+border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
 
 /* HOME STYLE*/
 #header_container{
@@ -138,3 +161,5 @@ display: block;
 height: 70px;
 opacity: 70%;
 }
+
+

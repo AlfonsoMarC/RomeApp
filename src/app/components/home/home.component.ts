@@ -47,7 +47,8 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.componentMounted = true;
-    this.barX = this.bar.nativeElement.getBoundingClientRect().x;
+    // Bad practice! See http://blog.enriqueoriol.com/2017/08/angular-dom-renderer.html to fix it
+    this.barX = this.bar.nativeElement.getBoundingClientRect().x; 
     this.barWidth = this.bar.nativeElement.offsetWidth;
     this.dragItemWidth = this.dragItem.nativeElement.offsetWidth
   }

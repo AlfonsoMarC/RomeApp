@@ -18,7 +18,7 @@ export class TpwComponent implements OnInit {
   }
 
   ngOnDestroy(){
-    this.sharedService.updateEpisode(0);
+   this.sharedService.updateEpisode(null);
   }
 
 }
