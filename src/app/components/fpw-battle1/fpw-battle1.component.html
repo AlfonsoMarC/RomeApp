@@ -1,57 +1,62 @@
 <div id="battleField">
     <img src="../../../assets/img-fpw/fpw_battle1.png" width="100%" alt="coast" />
 
-    <!--     <div id="squadronR1" [@squadronR1]="stage" (@squadronR1.start)="started($event)"
-        (@squadronR1.done)="finished($event)">
-        <div *ngFor="let ship of squadronR1" class="ship" [ngStyle]="{'bottom':ship.y_s, 'left': ship.x_s}">
-        </div>
-    </div>-->
-
-    
-
     <div id={{squadronR1[0].id}} class="squadron">
         <div *ngFor="let ship of squadronR1; let i = index" class="ship"
             [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
         </div>
     </div>
 
     <div id={{squadronR2[0].id}} class="squadron">
         <div *ngFor="let ship of squadronR2; let i = index" class="ship"
             [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
         </div>
     </div>
 
     <div id={{squadronR3[0].id}} class="squadron">
         <div *ngFor="let ship of squadronR3; let i = index" class="ship"
-            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}"></div>
+            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
+        </div>
     </div>
 
     <div id={{squadronR4[0].id}} class="squadron">
         <div *ngFor="let ship of squadronR4; let i = index" class="ship"
-            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}"></div>
+            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
+        </div>
     </div>
 
     <div id={{squadronC1[0].id}} class="squadron">
         <div *ngFor="let ship of squadronC1; let i = index" class="ship"
             [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
         </div>
     </div>
 
     <div id={{squadronC2[0].id}} class="squadron">
         <div *ngFor="let ship of squadronC2; let i = index" class="ship"
             [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
         </div>
     </div>
 
     <div id={{squadronC3[0].id}} class="squadron">
         <div *ngFor="let ship of squadronC3; let i = index" class="ship"
-            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}"></div>
+            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship">
+        </div>
     </div>
 
     <div id={{squadronC4[0].id}} class="squadron">
         <div *ngFor="let ship of squadronC4; let i = index" class="ship"
-            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}"></div>
+            [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
+                <img src="../../../assets/img-fpw/ship.png" alt="ship" class="imgShip">
+        </div>
     </div>
+
     
 
     <button (click)="forward()" style="position: absolute; top: 0%; left:0%">GO!</button>
