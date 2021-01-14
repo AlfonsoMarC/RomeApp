@@ -7,7 +7,7 @@ import { Component, OnChanges, Input, Output,EventEmitter } from '@angular/core'
 @Component({
   selector: 'mapframe',
   templateUrl: './frame.component.html',
-  styleUrls: ['./frame.component.css']
+  styleUrls: ['./frame.component.scss']
 })
 export class FrameComponent implements OnChanges {
  

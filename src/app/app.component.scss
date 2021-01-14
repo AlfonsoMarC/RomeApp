@@ -1,0 +1,43 @@
+.loading-stage {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:rgba(0,0,0,0.95);
+	z-index:100000;
+  
+	.text {
+	  position:absolute;
+	  padding-left:100px;
+	  top:50%;
+	  left:50%;
+	  transform:translateX(-50%) translateY(-50%);
+	  font-size:50px;
+	  line-height:80px;
+  
+// Draft For future animation 
+	  &:after, &:before {
+		width:40px;
+		height:80px;
+		position:absolute;
+		top:0;
+		left:0;
+		content:"";
+	  }
+  
+	  &:before {
+		animation: rotate 4s linear infinite;
+		background:blue;
+	  }
+  
+	  &:after {
+		background:red;
+		animation: rotate 1.5s linear infinite reverse;
+	  }
+	  
+	}
+  }
+
+
+

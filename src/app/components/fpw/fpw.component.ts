@@ -4,7 +4,7 @@ import { SharedService } from "../../shared.service";
 @Component({
   selector: 'app-fpw',
   templateUrl: './fpw.component.html',
-  styleUrls: ['./fpw.component.css']
+  styleUrls: ['./fpw.component.scss']
 })
 export class FpwComponent implements OnInit {
   

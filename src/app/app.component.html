@@ -11,7 +11,12 @@
 
 <body (window:resize)="onResize()">
 
-<!--HEADER-->	
+
+<div class="loading-stage" *ngIf="!ready">
+		<div class="text"> loading ({{ percentage }}%)</div>
+</div>
+
+  <!--HEADER-->	
  <main-header></main-header>
 
 <!--CONTAINER-->  

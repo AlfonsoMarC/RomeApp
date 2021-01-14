@@ -12,7 +12,7 @@ import { Component, HostListener, Input, OnChanges, SimpleChanges } from '@angul
 @Component({
   selector: 'subtitle',
   templateUrl: './subtitle.component.html',
-  styleUrls: ['./subtitle.component.css']
+  styleUrls: ['./subtitle.component.scss']
 })
 
 export class SubtitleComponent implements OnChanges{

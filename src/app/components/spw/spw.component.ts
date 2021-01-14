@@ -4,7 +4,7 @@ import { SharedService } from "../../shared.service";
 @Component({
   selector: 'app-spw',
   templateUrl: './spw.component.html',
-  styleUrls: ['./spw.component.css']
+  styleUrls: ['./spw.component.scss']
 })
 export class SpwComponent implements OnInit {
   private episodeNumber:number;

@@ -1,0 +1,87 @@
+#frame{
+display: block;
+position: absolute;
+z-index: 4;
+background-image: url("../../../assets/img/frame3.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;  
+}
+
+#frame.shrinked {
+top: 5%; 
+bottom:50%; 
+left: 2%; 
+right: 50%;
+font-size: 1.1vw;
+}  
+
+#frame.expanded{
+top: 5%; 
+bottom:3%; 
+left: 3%; 
+right: 3%;
+font-size: 16px;
+}
+
+#frame_header{
+min-height: 25px;
+margin-right: 5%;
+margin-left: 5%;
+margin-top: 2%;
+}
+    
+#frame_title {
+align-self: flex-end;
+font-size: 125%;
+font-weight: 500;
+}
+
+#close_button { 
+float:right;
+}
+
+#close_button > img {
+width: 20px;
+}
+
+#resize_button { 
+float:right;
+}
+
+#resize_button > img.expanded { 
+width: 20px;
+}
+
+#resize_button > img.shrinked { 
+width: 20px;
+transform: rotate(180deg);
+}
+
+#frame_text{
+position: absolute;
+bottom: 5%;
+top:25px;
+left: 5%;
+right: 5%;
+overflow-y: scroll;
+-ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+text-align: justify;
+margin-top:3%;
+}
+    
+/* Hide scrollbar for Chrome, Safari and Opera */
+#frame_text::-webkit-scrollbar { 
+display: none;
+}
+
+/* Use this style for every button*/
+button {
+background: transparent;
+box-shadow: none;
+border: none;
+text-shadow: none;
+}
+
+button:focus {
+outline: none!important;
+}

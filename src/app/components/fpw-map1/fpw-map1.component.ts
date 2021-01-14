@@ -5,7 +5,7 @@ import {FrameService} from '../../services/frame.service';
 @Component({
   selector: 'fpw-map1',
   templateUrl: './fpw-map1.component.html',
-  styleUrls: ['./fpw-map1.component.css'],
+  styleUrls: ['./fpw-map1.component.scss'],
   providers: [FrameService]
 })
 export class FpwMap1Component implements OnInit {
@@ -28,7 +28,7 @@ export class FpwMap1Component implements OnInit {
       "../../../assets/img-fpw/fpw1.png"
     ]
     this.frameIsOpen = false;
-    this.subtitleText=" The First Punic War (264 to 241 BC) was the first of three wars fought between Carthage and Rome, the two main powers of the western Mediterranean in the early 3rd century BC."
+    this.subtitleText="The First Punic War (264 to 241 BC) was the first of three wars fought between Carthage and Rome, the two main powers of the western Mediterranean in the early 3rd century BC. CLICK ON THE CITY NAMES!!"
   }
 
   ngOnInit() {

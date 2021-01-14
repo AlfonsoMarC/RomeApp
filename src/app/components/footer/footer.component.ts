@@ -4,7 +4,7 @@ import { SharedService } from "../../shared.service";
 @Component({
   selector: 'footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
   public episodeId: string;

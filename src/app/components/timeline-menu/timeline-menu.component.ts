@@ -6,7 +6,7 @@ import { Episode } from '../../models/episode';
 @Component({
   selector: 'timeline-menu',
   templateUrl: './timeline-menu.component.html',
-  styleUrls: ['./timeline-menu.component.css']
+  styleUrls: ['./timeline-menu.component.scss']
 })
 
 export class TimelineMenuComponent implements OnInit {

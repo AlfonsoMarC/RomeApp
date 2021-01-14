@@ -1,13 +1,14 @@
 .map_container{
-    /*We must positioned the container to use aboslute position in other elements*/
-    position: relative;
+/*We must positioned the container to use aboslute position in other elements*/
+position: relative;
 }
     
 .intercative_map{
-        width: 100%;
+width: 100%;
 }
     
 #fpw1_rome_a {position: absolute; z-index: 3; top: 22%;  left: 51.52%;  width: 8.7%;  height: 4%}
 #fpw1_carthage_a {position: absolute; z-index: 3; top: 57.5%; left: 36.5%; width: 15%; height: 4% }
 #fpw1_syracuse_a {position: absolute; z-index: 3; top: 54%; left: 66.7%; width: 14%; height: 3%;}
 #fpw1_messana_a {position: absolute; z-index: 3; top: 42%; left: 60%; width: 5.5%; height: 5.5%;}
+

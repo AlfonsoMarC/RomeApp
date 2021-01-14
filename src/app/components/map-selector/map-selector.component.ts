@@ -4,7 +4,7 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 @Component({
   selector: 'map-selector',
   templateUrl: './map-selector.component.html',
-  styleUrls: ['./map-selector.component.css']
+  styleUrls: ['./map-selector.component.scss']
 })
 // How it works?
 // We receive the maps as an Input from its parent component and navigate between them with the router navigate relative to its parent route

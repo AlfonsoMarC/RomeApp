@@ -9,12 +9,10 @@ import { bindCallback } from 'rxjs';
 @Component({
   selector: 'app-fpw-battle1',
   templateUrl: './fpw-battle1.component.html',
-  styleUrls: ['./fpw-battle1.component.css'],
- /*
-      transition('* => stage2', [
-        animate('15s ease-in-out')*/
-  
+  styleUrls: ['./fpw-battle1.component.scss'],
+
 })
+
 export class FpwBattle1Component implements OnInit {
 
   public stage: string;
@@ -153,8 +151,6 @@ export class FpwBattle1Component implements OnInit {
       ])   
       )    
   }
-
-  // 'rotate(90deg)'  '800% 0%' 'rotate(-160deg)'
 
   private _turnSquadronPlayer(squadron, orientation:number, origin:string, arc:number, time:number) {
     const animation = this._turnSquadronAnimation(squadron, orientation, origin, arc, time);
