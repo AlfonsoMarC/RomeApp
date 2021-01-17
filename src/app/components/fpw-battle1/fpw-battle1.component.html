@@ -53,13 +53,16 @@
     <div id={{squadronC4[0].id}} class="squadron">
         <div *ngFor="let ship of squadronC4; let i = index" class="ship"
             [ngStyle]="{'bottom':ship.y_initial, 'left': ship.x_initial}">
-                <img src="../../../assets/img-fpw/ship.png" alt="ship" class="imgShip">
+            <img src="../../../assets/img-fpw/ship.png" alt="ship" class="imgShip">
         </div>
     </div>
 
-    
 
-    <button (click)="forward()" style="position: absolute; top: 0%; left:0%">GO!</button>
+
+    <button id="forwardButton" (click)="forward()" 
+    [ngClass]="{'on': !animationIsRunning, 'off': animationIsRunning}">
+    GO!
+    </button>
 
 
 

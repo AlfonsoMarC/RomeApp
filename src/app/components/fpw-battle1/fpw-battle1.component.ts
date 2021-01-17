@@ -17,7 +17,8 @@ export class FpwBattle1Component implements OnInit {
 
   public stage: string;
   public stageCounter: number;
-  public animationIsRunning: boolean;
+  public animationIsRunning: boolean; 
+ 
 
   
   /* Roman squadrons I to IV*/
@@ -36,7 +37,7 @@ export class FpwBattle1Component implements OnInit {
   public player: AnimationPlayer = new NoopAnimationPlayer();
 
   constructor(private _builder: AnimationBuilder, private _element: ElementRef) {
-    this.stageCounter = 0;   
+    this.stageCounter = 0; 
   }
 
   ngOnInit() {
@@ -124,9 +125,9 @@ export class FpwBattle1Component implements OnInit {
       let stagger_i=stagger*i; 
       var player=this._moveShipPlayer(shipQuery, position, orientation, time, delay, stagger_i);
       player.play();
-      if (i==size-1 && typeof callback == "function"){
+      if (i===size-1){
          player.onDone(()=>{
-            callback(); 
+          if(callback){callback();}
         });
       }
     }
@@ -166,15 +167,21 @@ export class FpwBattle1Component implements OnInit {
 
   
   
+  
+
+  
 
   forward() {
 
-   if (!this.animationIsRunning) {
+   if (this.animationIsRunning===false) {
+      this.animationIsRunning = true;
       this.stageCounter++;
       this.stage = "stage" + this.stageCounter;
       switch (this.stageCounter) {
         case 1: {
-          this._moveSquadron(this.squadronR1, { x0: 30, y0: 50.5, xn: 40, yn:65},20,0,0);
+          this._moveSquadron(this.squadronR1, { x0: 30, y0: 50.5, xn: 40, yn:65},20,0,0, ()=>{
+            this.animationIsRunning=false;
+          });
           this._moveSquadron(this.squadronR2, { x0: 30, y0: 49.5, xn: 40, yn:35},20,0,0);
           this._moveSquadron(this.squadronR3, { x0: 60, y0: 40, xn: 60, yn: 60},18,2,0);
           this._moveSquadron(this.squadronR4, { x0: 65, y0: 35, xn: 65, yn: 65},18,2,0);
@@ -185,8 +192,11 @@ export class FpwBattle1Component implements OnInit {
         }
 
         case 2: {
-          this._moveSquadron(this.squadronR1, { x0: 25, y0: 50.5, xn: 27, yn:65},5,0,0.1);
-          this._moveSquadron(this.squadronR2, { x0: 25, y0: 49.5, xn: 27, yn:35},5,0,0.1);
+          
+          this._moveSquadron(this.squadronR1, { x0: 25.5, y0: 50.5, xn: 27.5, yn:65},5,0,0.1,  ()=>{
+            this.animationIsRunning=false;
+          });
+          this._moveSquadron(this.squadronR2, { x0: 25.5, y0: 49.5, xn: 27.5, yn:35},5,0,0.1);
           this._moveSquadron(this.squadronR3, { x0: 50, y0: 40, xn: 50, yn: 60},5,0,0);
           this._moveSquadron(this.squadronR4, { x0: 55, y0: 35, xn: 55, yn: 65},5,0,0);
           this._moveSquadron(this.squadronC2, { x0: 24, y0: 50.5, xn: 26, yn:67},5,0,0.2);
@@ -196,6 +206,7 @@ export class FpwBattle1Component implements OnInit {
         }
 
         case 3: {
+          alert("To be continued"); 
          /* this._moveSquadron(this.squadronR3, { x0: 50, y0: 40, xn: 50, yn: 60},5,0, 0);
           this._moveSquadron(this.squadronR4, { x0: 55, y0: 37, xn: 65, yn: 55},5,0, 0.1);
           this._moveSquadron(this.squadronC4, { x0: 56, y0: 34, xn: 70, yn: 33},5,0, 0.1);*/
@@ -216,13 +227,3 @@ export class FpwBattle1Component implements OnInit {
 }
 
 
-
-/*
-
-  started(e) {
-    this.animationIsRunning = true;
-  }
-
-  finished(e) {
-    this.animationIsRunning = false;
-  }*/

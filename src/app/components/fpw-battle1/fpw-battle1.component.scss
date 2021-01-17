@@ -5,13 +5,20 @@
 
 .ship{
     position: absolute;
-    width: 5%;
-    height: 5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 2.5%;
+    height: 1%;
 }
 
 .ship > img{
-    width: 24px;
-    height: 4px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    /*width: 24px;
+    height: 4px;*/
 }
 
 .squadron{
@@ -23,13 +30,15 @@
 }
 
 
-/*#squadronC4{
-    animation-name: example;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
+/*PROVISIONAL STYLE*/
+#forwardButton{
+    position: absolute; top: 0%; left:0%
 }
 
-@keyframes example {
-    to {transform: 'rotate(45deg)'}
+#forwardButton.on{
+    background-color: green;
 }
-*/
+
+#forwardButton.off{
+    background-color: red; 
+}
