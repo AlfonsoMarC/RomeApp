@@ -1,9 +1,14 @@
 .message{
     position: absolute;
-    top: 40%;
-    left: 40%;
-    font-size: 50px;
+    top: 45%;
+    height: 10%;
+    left: 35%;
+    right: 35%;
+    font-size: 3.5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     background-color: white;
     transform: rotate(-45deg);
-    padding: 1%;
 }
