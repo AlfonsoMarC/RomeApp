@@ -22,6 +22,7 @@ export class HomeComponent implements AfterViewInit {
   private barX: number;
   private x: number; // position in pixels relative to the bar (captured in an event) 
   private dragItemX: number; // position in percentaje relative to the bar (to render the dragItem)
+  public dragItemXPerc: string; // dragItemX + '%'
   //private clickX: number; // click x coordinate relative to the bar in pixels
 
 
@@ -63,7 +64,6 @@ export class HomeComponent implements AfterViewInit {
   }
 
   handleResize() {
-    //This function will be invoked in window.addEventListener
     if (this.componentMounted) {
       this.barX = this.bar.nativeElement.getBoundingClientRect().x;
       this.barWidth = this.bar.nativeElement.offsetWidth;
@@ -116,7 +116,8 @@ export class HomeComponent implements AfterViewInit {
       this.dragItemX = this.x / this.barWidth * 100;
       this.mapNumber = Math.trunc((this.dragItemX * this.numberOfMaps) / 100);
     }
-    document.getElementById("drag_item").style.left = this.dragItemX + "%";
+
+    this.dragItemXPerc=this.dragItemX + '%'; 
     this.expansionMap = this.maps[this.mapNumber];
   }
 
@@ -131,7 +132,7 @@ export class HomeComponent implements AfterViewInit {
     } else if (this.mapNumber == this.numberOfMaps - 1) {
       this.dragItemX = (this.barWidth - this.dragItemWidth) / this.barWidth * 100;
     }
-    document.getElementById("drag_item").style.left = this.dragItemX + "%";
+    this.dragItemXPerc=this.dragItemX + '%'; 
   }
 
   previousMapArrow(e) {
@@ -143,7 +144,7 @@ export class HomeComponent implements AfterViewInit {
     } else if (this.mapNumber == 0) {
       this.dragItemX = 0;
     }
-    document.getElementById("drag_item").style.left = this.dragItemX + "%";
+    this.dragItemXPerc=this.dragItemX + '%'; 
   }
 
 }
