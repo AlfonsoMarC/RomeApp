@@ -1,5 +1,9 @@
 <div id="battleField">
-    <img src="../../../assets/img-fpw/fpw_battle1.png" width="100%" alt="coast" />
+    <picture>
+        <source srcset="../../../assets/img-fpw/fpw_battle1.png" media="(min-width: 768px)">
+        <img src="../../../assets/img-fpw/fpw_battle1_md.png" width="100%" alt="coast" />
+    </picture>
+    
 
     <div id={{squadronR1[0].id}} class="squadron">
         <div *ngFor="let ship of squadronR1; let i = index" class="ship"

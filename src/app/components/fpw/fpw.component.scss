@@ -1,41 +1,45 @@
 .nav-tabs {
     font-family: celtichand, "Times New Roman", Times, serif;
-    margin-left: 0.5%;
     background-color:#700c05;
     border: none!important;
-    }
+    @media (min-width:768px){
+        margin-left: 0.5%;
+    }   
+}
+
+
     
-    .nav-tabs .nav-item {
+.nav-tabs .nav-item {
     margin-bottom:0px!important;
-    }
+}
     
-    a.tab.nav-link.active{
+a.tab.nav-link.active{
     color: darkslategray;
     background-color: #e5b68b!important;
     border:none!important;
     border-radius: 0px!important;
     box-shadow:inset 5px 5px 10px #470a05;
-    }
+}
     
-    .tab.nav-link {
+.tab.nav-link {
     color:#e5b68b;
     border:none!important;
-    }
+}
     
-    .tab.nav-link:hover {
+.tab.nav-link:hover {
     color:#f8d9b7;
     border:none;
     text-shadow: 1px 1px 5px #fff;	
-    }
+}
     
-    .tab.nav-link.active:hover {
+.tab.nav-link.active:hover {
     color: darkslategray;
     text-shadow: none;	
     border:none!important;
     text-shadow: none;
-    }
+}
     
     
-    #profile{
-        width: 100%;
-    }
+#profile{
+    width: 100%;
+}
