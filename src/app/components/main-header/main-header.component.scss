@@ -1,5 +1,21 @@
-/* COMMON STYLES*/
+// Define Colors
+$wine: #460906; 
+$orange: #db4c0a; 
+$beige: #facb8d; 
+$light-beige:#f8d9b7; 
+$sepia: #e5b68b; 
+$light-brown: #bd8c42;
 
+//Define fonts
+$caligula: caligula, "Times New Roman", Times, serif;
+$celtichand: celtichand, "Times New Roman", Times, serif; 
+
+// Define repetitive styles
+$wine-text-shadow: -1px -1px 5px  $wine , 1px 1px 5px  $wine , -1px 1px 5px  $wine , 1px -1px 5px  $wine ;
+
+
+
+/* COMMON STYLES*/
 #rome-header {
 height: 80px; 
 display: flex;
@@ -8,17 +24,17 @@ margin:0;
 }
 
 .navbar-brand{
-font-family: caligula, "Times New Roman", Times, serif;
-color:#db4c0a;
+font-family: $caligula;
+color:$orange;
 text-shadow: darkgoldenrod 4px 4px 10px;
 font-weight: 200;
--webkit-text-stroke: 1px #facb8d;
+-webkit-text-stroke: 1px $beige;
 }
 
 .navbar-brand:hover {
 color:#d07d2f;
--webkit-text-stroke: 1px #f8d9b7;
-text-shadow: #f8d9b7 4px 4px 10px;
+-webkit-text-stroke: 1px $light-beige;
+text-shadow: $light-beige 4px 4px 10px;
 }
 
 #rome-header-icon {
@@ -69,33 +85,31 @@ display: none;
 #episode-header{
 width: 100%;
 height: 100%;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 /*FIST PUNIC WAR STYLE*/
 
 #header_container.fpw {
-background-color: #470a05;
-border-bottom: 3px solid #e5b68b;
+background-color: $wine;
+border-bottom: 3px solid $sepia;
 }
 
 #episode-header.fpw{
-width: 100%;
-height: 100%;
 background-image: url("../../../assets/img/fpw-header-bg.png");
 background-size: 100% 100%;
-background-repeat: no-repeat;
-background-position: center; 
 }
 
 #header_title.fpw{
 margin:0px;
-font-family:caligula, "Times New Roman", Times, serif;
+font-family: $caligula;
 font-size: 2rem;
 white-space: nowrap;
-color:   #bd8c42;
-text-shadow: -1px -1px 5px  #460906 , 1px 1px 5px  #460906 , -1px 1px 5px  #460906 , 1px -1px 5px  #460906 ;
+color:   $light-brown;
+text-shadow: $wine-text-shadow;
 /*background:-webkit-radial-gradient(center, ellipse,  #bca071 10%, transparent  70%);*/
-/*background:-webkit-radial-gradient(center, ellipse,  #bca071 10%, #460906  70%);*/
+/*background:-webkit-radial-gradient(center, ellipse,  #bca071 10%, $wine  70%);*/
 }
 
 #header_icon.fpw{ 
@@ -108,26 +122,22 @@ margin-right: 10px;
 /*SECOND PUNIC WAR STYLE*/
 
 #header_container.spw {
-background-color: #460906 ;
-border-bottom: 3px solid   #e5b68b;
+background-color: $wine ;
+border-bottom: 3px solid   $sepia;
 }
 
 #episode-header.spw{
-width: 100%;
-height: 100%;
 background-image: url("../../../assets/img/spw-header-bg.png");
 background-size: 100% 80%;
-background-repeat: no-repeat;
-background-position: center; 
 }
 
 #header_title.spw{
 margin:0px;
-font-family:caligula, "Times New Roman", Times, serif;
+font-family: $caligula;
 font-size: 2rem;
 white-space: nowrap;
-color:   #bd8c42;
-text-shadow: -1px -1px 5px  #460906 , 1px 1px 5px  #460906 , -1px 1px 5px  #460906 , 1px -1px 5px  #460906 ;
+color:   $light-brown;
+text-shadow: $wine-text-shadow;
 /*background:-webkit-radial-gradient(center, ellipse,  #bca071 10%, transparent  70%);*/
 }
 
@@ -141,17 +151,17 @@ margin-right: 5px;
 /*THIRD PUNIC WAR STYLE*/
 
 #header_container.tpw {
-background-color: #460906 ;
-border-bottom: 3px solid #e5b68b;
+background-color: $wine ;
+border-bottom: 3px solid $sepia;
 }
 
 #header_title.tpw{
-font-family:celtichand, "Times New Roman", Times, serif;
+font-family: $celtichand;
 white-space: nowrap;
-color:   #bd8c42;
--webkit-text-stroke: #460906 1px ;
-text-shadow: -1px -1px 5px  #460906 , 1px 1px 5px  #460906 , -1px 1px 5px  #460906 , 1px -1px 5px  #460906 ;
-background:-webkit-radial-gradient(center, ellipse,  #bca071 10%, #470a05 70%);
+color:   $light-brown;
+-webkit-text-stroke: $wine 1px ;
+text-shadow: $wine-text-shadow;
+background:-webkit-radial-gradient(center, ellipse,  #bca071 10%, $wine 70%);
 }
 
 #header_icon.tpw{ 
